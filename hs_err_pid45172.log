@@ -1,0 +1,249 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 132120576 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3631), pid=45172, tid=23656
+#
+# JRE version:  (22.0.2+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (22.0.2+9-70, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 --module-path=C:\Users\Lenovo\Documents\NetBeansProjects\bank management system\build\classes bank.management.system.SignupThree
+
+Host: Intel(R) Core(TM) i3-10110U CPU @ 2.10GHz, 4 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.3958)
+Time: Sat Sep  7 15:23:09 2024 India Standard Time elapsed time: 0.032342 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001ca5459f020):  JavaThread "Unknown thread" [_thread_in_vm, id=23656, stack(0x00000040a5900000,0x00000040a5a00000) (1024K)]
+
+Stack: [0x00000040a5900000,0x00000040a5a00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6e26e9]  (no source info available)
+V  [jvm.dll+0x875753]  (no source info available)
+V  [jvm.dll+0x877b7e]  (no source info available)
+V  [jvm.dll+0x878253]  (no source info available)
+V  [jvm.dll+0x27fc86]  (no source info available)
+V  [jvm.dll+0x6ded85]  (no source info available)
+V  [jvm.dll+0x6d388a]  (no source info available)
+V  [jvm.dll+0x358b8a]  (no source info available)
+V  [jvm.dll+0x3610b6]  (no source info available)
+V  [jvm.dll+0x3b419e]  (no source info available)
+V  [jvm.dll+0x3b4448]  (no source info available)
+V  [jvm.dll+0x32c5ec]  (no source info available)
+V  [jvm.dll+0x32d258]  (no source info available)
+V  [jvm.dll+0x83d5ac]  (no source info available)
+V  [jvm.dll+0x3c10d1]  (no source info available)
+V  [jvm.dll+0x8264cc]  (no source info available)
+V  [jvm.dll+0x45bd5e]  (no source info available)
+V  [jvm.dll+0x45dbe1]  (no source info available)
+C  [jli.dll+0x52a3]  (no source info available)
+C  [ucrtbase.dll+0x29333]  (no source info available)
+C  [KERNEL32.DLL+0x1257d]  (no source info available)
+C  [ntdll.dll+0x5af28]  (no source info available)
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fff58a6c1c8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x000001ca54802a60 WorkerThread "GC Thread#0"                     [id=37424, stack(0x00000040a5a00000,0x00000040a5b00000) (1024K)]
+  0x000001ca54814560 ConcurrentGCThread "G1 Main Marker"            [id=44324, stack(0x00000040a5b00000,0x00000040a5c00000) (1024K)]
+  0x000001ca54815880 WorkerThread "G1 Conc#0"                       [id=43688, stack(0x00000040a5c00000,0x00000040a5d00000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff581bf517]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007fff58aecc80] Heap_lock - owner thread: 0x000001ca5459f020
+
+Heap address: 0x0000000082800000, size: 2008 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 12 size 40 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total reserved 2056192K, committed 0K, used 0K [0x0000000082800000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff585be869]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.024 Loaded shared library C:\Program Files\Java\jdk-22\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6d2580000 - 0x00007ff6d2590000 	C:\Program Files\Java\jdk-22\bin\java.exe
+0x00007ffff7930000 - 0x00007ffff7b47000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffff69b0000 - 0x00007ffff6a74000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffff50d0000 - 0x00007ffff547d000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffff1ce0000 - 0x00007ffff1d77000 	C:\WINDOWS\SYSTEM32\apphelp.dll
+0x00007ffff4e60000 - 0x00007ffff4f71000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffde800000 - 0x00007fffde817000 	C:\Program Files\Java\jdk-22\bin\jli.dll
+0x00007ffff7700000 - 0x00007ffff78ae000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffff4f80000 - 0x00007ffff4fa6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffff5df0000 - 0x00007ffff5e19000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffd2bc0000 - 0x00007fffd2e53000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3672_none_2713b9d173822955\COMCTL32.dll
+0x00007ffff4fb0000 - 0x00007ffff50c9000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffff6a80000 - 0x00007ffff6b27000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffff4c50000 - 0x00007ffff4cea000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffeac60000 - 0x00007fffeac7b000 	C:\Program Files\Java\jdk-22\bin\VCRUNTIME140.dll
+0x00007ffff78b0000 - 0x00007ffff78e1000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000006b4a0000 - 0x000000006b4ac000 	C:\Program Files (x86)\360\Total Security\safemon\SafeWrapper.dll
+0x00007ffff6d80000 - 0x00007ffff6e32000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffff5660000 - 0x00007ffff5709000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffff5630000 - 0x00007ffff5658000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffff6890000 - 0x00007ffff69a4000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffbf360000 - 0x00007fffbf3f2000 	C:\Program Files (x86)\360\Total Security\safemon\libzdtp64.dll
+0x00007ffff6e90000 - 0x00007ffff76f8000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffff5950000 - 0x00007ffff59ae000 	C:\WINDOWS\System32\SHLWAPI.dll
+0x00007ffff4610000 - 0x00007ffff461a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fffeac80000 - 0x00007fffeac8c000 	C:\Program Files\Java\jdk-22\bin\vcruntime140_1.dll
+0x00007fffbee80000 - 0x00007fffbef0e000 	C:\Program Files\Java\jdk-22\bin\msvcp140.dll
+0x00007fff57e80000 - 0x00007fff58bc9000 	C:\Program Files\Java\jdk-22\bin\server\jvm.dll
+0x00007ffff59b0000 - 0x00007ffff5a21000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffff4b10000 - 0x00007ffff4b5d000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007fffee240000 - 0x00007fffee274000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffff4af0000 - 0x00007ffff4b03000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffff3c10000 - 0x00007ffff3c28000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fffeac50000 - 0x00007fffeac5a000 	C:\Program Files\Java\jdk-22\bin\jimage.dll
+0x00007fffecec0000 - 0x00007fffed0f2000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffff5a60000 - 0x00007ffff5ded000 	C:\WINDOWS\System32\combase.dll
+0x00007ffff6ba0000 - 0x00007ffff6c77000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007fffece80000 - 0x00007fffeceb2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffff54f0000 - 0x00007ffff556b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fffdbe90000 - 0x00007fffdbeae000 	C:\Program Files\Java\jdk-22\bin\java.dll
+0x00007ffff5720000 - 0x00007ffff58c5000 	C:\WINDOWS\System32\ole32.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.3672_none_2713b9d173822955;C:\Program Files (x86)\360\Total Security\safemon;C:\Program Files\Java\jdk-22\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 --module-path=C:\Users\Lenovo\Documents\NetBeansProjects\bank management system\build\classes 
+java_command: bank.management.system.SignupThree
+java_class_path (initial): C:\Users\Lenovo\Downloads\jcalendar-tz-1.3.3-4.jar;C:\Users\Lenovo\Downloads\mysql-connector-java-8.0.28.jar;C:\Users\Lenovo\Documents\NetBeansProjects\bank management system\build\classes
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 132120576                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2105540608                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2105540608                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-22\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\Lenovo\AppData\Local\Programs\Python\Python312\;C:\Users\Lenovo\AppData\Local\Microsoft\WindowsApps;C:\Users\Lenovo\AppData\Local\Programs\Microsoft VS Code\bin
+USERNAME=Lenovo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 12, GenuineIntel
+TMP=C:\Users\Lenovo\AppData\Local\Temp
+TEMP=C:\Users\Lenovo\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.3958)
+OS uptime: 19 days 21:54 hours
+
+CPU: total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 12 microcode 0xf0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, fma, vzeroupper, clflush, clflushopt, rdtscp, f16c
+Processor Information for processor 0
+  Max Mhz: 2592, Current Mhz: 1495, Mhz Limit: 2073
+Processor Information for processor 1
+  Max Mhz: 2592, Current Mhz: 2093, Mhz Limit: 2073
+Processor Information for processor 2
+  Max Mhz: 2592, Current Mhz: 1495, Mhz Limit: 2073
+Processor Information for processor 3
+  Max Mhz: 2592, Current Mhz: 2093, Mhz Limit: 2073
+
+Memory: 4k page, system-wide physical 8026M (774M free)
+TotalPageFile size 32602M (AvailPageFile size 95M)
+current process WorkingSet (physical memory assigned to process): 13M, peak: 13M
+current process commit charge ("private bytes"): 52M, peak: 178M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (22.0.2+9-70) for windows-amd64 JRE (22.0.2+9-70), built on 2024-06-04T16:52:23Z by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.
